@@ -4,13 +4,17 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Mat image = Cv2.ImRead(@"..\..\..\..\..\images\lena.jpg", ImreadModes.Color);
+        string path = @"..\..\..\..\..\images\lena.jpg";
+        Mat image = Cv2.ImRead(path, ImreadModes.Color);
 
         //5.2 - Image shifting
         //Translation Matrix
         //[1,0,tx]
         //[0,1,ty]
         //ShiftImage(image);
+
+        //5.3 - Image rotation
+        //RotateImage(image);
 
 
         Cv2.WaitKey();
@@ -32,5 +36,17 @@ internal class Program
         Mat dest = new Mat();
         Cv2.WarpAffine(image, dest,M, new Size(image.Width + 60,image.Height + 60));
         Cv2.ImShow("shifted", dest);
+    }
+
+    public static void RotateImage(Mat image)
+    {
+        var center = new Point2f(image.Width / 2, image.Height / 2);
+        double angle = -45.0;
+        Mat RM = Cv2.GetRotationMatrix2D(center, angle, 0.5);
+        Mat dest = new Mat();
+
+        Cv2.WarpAffine(image, dest, RM, new Size(image.Width, image.Height));
+        Cv2.ImShow("rotated", dest);
+        Cv2.WarpAffine(image, dest, RM, new Size(image.Width, image.Height));
     }
 }
