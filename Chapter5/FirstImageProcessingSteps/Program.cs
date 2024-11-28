@@ -16,6 +16,14 @@ internal class Program
         //5.3 - Image rotation
         //RotateImage(image);
 
+        //5.4 - Image resize
+        //ResizeImage(image);
+
+        //5.5 - Image flipping
+        //FlipImage(image);
+
+        //5.6 - Images Operations
+        BitwiseImage();
 
         Cv2.WaitKey();
         Cv2.DestroyAllWindows();
@@ -48,5 +56,43 @@ internal class Program
         Cv2.WarpAffine(image, dest, RM, new Size(image.Width, image.Height));
         Cv2.ImShow("rotated", dest);
         Cv2.WarpAffine(image, dest, RM, new Size(image.Width, image.Height));
+    }
+
+    public static void ResizeImage(Mat image)
+    {
+        Mat dest = new Mat();
+        Cv2.Resize(image, dest, new Size(0, 0), 0.5, 0.5);
+        Cv2.ImShow("resized", dest);
+    }
+
+    public static void FlipImage(Mat image)
+    {
+        Mat dest = new Mat();
+        Mat dest2 = new Mat();
+        Mat dest3 = new Mat();
+        Cv2.Flip(image, dest, FlipMode.X);
+        Cv2.Flip(image, dest2, FlipMode.Y);
+        Cv2.Flip(image, dest3, FlipMode.XY);
+
+        Cv2.ImShow("Flipped X", dest);
+        Cv2.ImShow("Flipped Y", dest2);
+        Cv2.ImShow("Flipped XY", dest3);
+
+    }
+
+    public static void BitwiseImage()
+    {
+        Mat image1 = Mat.Zeros(new Size(400, 200), MatType.CV_8UC1);
+        Mat image2 = Mat.Zeros(new Size(400, 200), MatType.CV_8UC1);
+
+        Cv2.Rectangle(image1, new Rect(new Point(0, 0), new Size(image1.Cols / 2, image1.Rows)), new Scalar(255, 255, 255), -1);
+        Cv2.ImShow("image1", image1);
+
+        Cv2.Rectangle(image2, new Rect(new Point(150, 100), new Size(200, 50)), new Scalar(255, 255, 255), -1);
+        Cv2.ImShow("image2", image2);
+
+        Mat andOp = new Mat();
+        Cv2.BitwiseAnd(image1, image2, andOp);
+        Cv2.ImShow("Operation AND", andOp);
     }
 }
