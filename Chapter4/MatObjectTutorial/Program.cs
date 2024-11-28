@@ -5,7 +5,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string path = @"..\..\..\..\images\lena.jpg";
+        string path = @"..\..\..\..\..\images\lena.jpg";
         Mat colorImage = Cv2.ImRead(path, ImreadModes.Color);
 
         //4.2 Mat Object creation
@@ -20,7 +20,7 @@ internal class Program
         //GetPixels(colorImage);
 
         //4.6 Mat Object Image manipulation - Second Method
-        //GetPixelsIndexer(colorImage);
+        GetPixelsIndexer(colorImage);
 
         //4.6.2 Mat Object Image manipulation - Third Method
         // MatOfByte3 - Object not found in library
