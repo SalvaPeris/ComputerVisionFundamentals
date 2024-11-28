@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using System;
+﻿using OpenCvSharp;
 
 internal class Program
 {
