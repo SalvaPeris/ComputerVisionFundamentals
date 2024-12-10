@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string path = @"..\..\..\..\..\images\bookpage.jpg";
+        string path = @"..\..\..\..\..\images\lena.jpg";
         Mat image = Cv2.ImRead(path, ImreadModes.Color);
         Cv2.ImShow("original", image);
 
@@ -12,7 +12,10 @@ internal class Program
         //GetBinaryThreshold(image);
 
         // 6.2 Part 2
-        GetGrayscaledThreshold(image);
+        //GetGrayscaledThreshold(image);
+
+        // 6.3 Otsu
+        GetOtsuThreshold(image);
 
         Cv2.WaitKey();
         Cv2.DestroyAllWindows();
@@ -47,5 +50,16 @@ internal class Program
         Cv2.ImWrite("denoised.jpg", grayscaledImage);
         Cv2.CvtColor(image, grayscaledImage, ColorConversionCodes.BGR2GRAY);
         Cv2.ImShow("gray image", grayscaledImage);
+    }
+
+    private static void GetOtsuThreshold(Mat image)
+    {
+        Mat grayscaledLeaf = new Mat();
+        Cv2.CvtColor(image, grayscaledLeaf, ColorConversionCodes.BGR2GRAY);
+        Cv2.ImShow("gray image", grayscaledLeaf);
+        Mat otsu = new Mat();
+        Cv2.Threshold(grayscaledLeaf, otsu, 0, 255, ThresholdTypes.Otsu | ThresholdTypes.Binary);
+        Cv2.ImShow("otsu", otsu);
+        Cv2.ImWrite("otsu.jpg", otsu);
     }
 }
