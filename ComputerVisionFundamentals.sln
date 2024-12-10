@@ -7,20 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter4", "Chapter4", "{3D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{7F540903-D3AB-4133-B00A-F5E5EDBB08EB}"
 	ProjectSection(SolutionItems) = preProject
+		images\bookpage.jpg = images\bookpage.jpg
 		images\lena.jpg = images\lena.jpg
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingShapes", "Chapter4\DrawingShapes\DrawingShapes.csproj", "{56D5E9C8-49D6-42C8-8983-80DD26D91CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrawingShapes", "Chapter4\DrawingShapes\DrawingShapes.csproj", "{56D5E9C8-49D6-42C8-8983-80DD26D91CFD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 5", "Chapter 5", "{08C41746-C92A-4F11-95C0-74E185F447E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstImageProcessingSteps", "Chapter5\FirstImageProcessingSteps\FirstImageProcessingSteps.csproj", "{377B653F-E86F-45C4-ADDA-471CDDD8474C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstImageProcessingSteps", "Chapter5\FirstImageProcessingSteps\FirstImageProcessingSteps.csproj", "{377B653F-E86F-45C4-ADDA-471CDDD8474C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatObjectTutorial", "Chapter4\MatObjectTutorial\MatObjectTutorial.csproj", "{EB710533-D00E-4909-8114-510E6DED2F33}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 6", "Chapter 6", "{6626CD5A-E604-4AE2-A595-8A45F20C0D8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThresholdingDemo", "Chapter6\ThresholdingDemo\ThresholdingDemo.csproj", "{C4D8C78E-CE35-4256-9902-6404159D855C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThresholdingDemo", "Chapter6\ThresholdingDemo\ThresholdingDemo.csproj", "{C4D8C78E-CE35-4256-9902-6404159D855C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
