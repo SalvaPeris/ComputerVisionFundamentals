@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{7F5409
 	ProjectSection(SolutionItems) = preProject
 		images\bookpage.jpg = images\bookpage.jpg
 		images\lena.jpg = images\lena.jpg
+		images\shapes.png = images\shapes.png
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrawingShapes", "Chapter4\DrawingShapes\DrawingShapes.csproj", "{56D5E9C8-49D6-42C8-8983-80DD26D91CFD}"
@@ -29,7 +30,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HistogramDemo", "Chapter7\H
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter8", "Chapter8", "{B4B09D14-B62E-427D-A816-B7790676B753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringDemo", "Chapter8\FilteringDemo\FilteringDemo.csproj", "{AD2F283D-3749-4901-89C4-0FBFD1E51093}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilteringDemo", "Chapter8\FilteringDemo\FilteringDemo.csproj", "{AD2F283D-3749-4901-89C4-0FBFD1E51093}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
